@@ -1,14 +1,14 @@
 if SHIELD_JCORNE_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "jCorne"
+	default "split fuckboard"
 
 endif
 
 if SHIELD_JCORNE_RIGHT
 
 config ZMK_KEYBOARD_NAME
-	default "jCorne Right"
+	default "split fuckboard left"
 	
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
