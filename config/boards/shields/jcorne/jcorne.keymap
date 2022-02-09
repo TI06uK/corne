@@ -9,7 +9,7 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define HOTKEYS 1
+#define NUMBERS 1
 #define NAV     2
 #define SELECT  3
 #define NUMBERS 4
@@ -41,20 +41,20 @@
    &mt LALT BSPC  &as LS(Q) Q &as LS(W) W &as LS(E) E &as LS(R) R &as LS(T) T   &as LS(Y) Y &as LS(U) U &as LS(I) I &as LS(O) O &as LS(P) P &kp LWIN
    &mt LCTRL TAB  &as LS(A) A &as LS(S) S &as LS(D) D &as LS(F) F &as LS(G) G   &as LS(H) H &as LS(J) J &as LS(K) K &as LS(L) L &as LS(APOS) APOS &kp RET
    &mt LSHFT LPAR &as LS(Z) Z &as LS(X) X &as LS(C) C &as LS(V) V &as LS(B) B   &as LS(N) N &as LS(M) M &as LS(COMMA) COMMA &as LS(DOT) DOT &as LS(FSLH) FSLH &mt RSHFT RPAR
-                   &kp LGUI &mo SYMBOLS &mo NAV   &kp SPACE &mo HOTKEYS &kp LG(LS(A))
+                   &kp LGUI &mo SYMBOLS &mo NAV   &kp SPACE &mo NUMBERS &kp LG(LS(A))
                         >;
                         sensor-bindings = <&inc_dec_cp DOWN_ARROW UP_ARROW>;
                 };
-                hotkeys_layer {
+                numbers_layer {
 // -----------------------------------------------------------------------------------------
 // | ESC|   1    |    2   |  3    |  4    |   5   |   |   6    |   7   |   8   |  9  |  0  | DEL |
-// | GRV|   !    |    @   |  #    |  $    |   %   |   |   ^    |   &   |   *   | F19 | F12 | F16 |
+// | GRV|   !    |    @   |  #    |  $    |   %   |   |   ^    |   &   |   *   |  (  |  )  | \ | |
 // | F8 |        | GSFT 4 | PG_UP | PG_DN | CTL U |   |        |       | ALT A | F20 | F13 | F17 |
 //                        |  --   | LGUI  | LCTRL |   | SPACE  |  --   |  --   |
                         bindings = <
-   &kp ESC   &kp N1        &kp N2         &kp N3    &kp N4    &kp N5     &kp N6        &kp N7       &kp N8       &kp N9  &kp N0  &kp DEL
-   &kp GRAVE &kp EXCL      &kp HASH       &kp LBKT  &kp DLLR  &kp PRCNT  &KP CARET     &kp AMPS     &kp STAR     &kp F19 &kp F12 &kp F16
-   &kp F8    &none         &kp LG(LS(N4)) &kp PG_UP &kp PG_DN &kp LC(U)  &none         &none        &kp LA(A)    &kp F20 &kp F13 &kp F17
+   &kp ESC   &kp N1        &kp N2         &kp N3    &kp N4    &kp N5     &kp N6        &kp N7       &kp N8       &kp N9   &kp N0  &kp DEL
+   &kp GRAVE &kp EXCL      &kp HASH       &kp LBKT  &kp DLLR  &kp PRCNT  &KP CARET     &kp AMPS     &kp STAR     &kp LPAR &kp F12 &kp F16
+   &kp F8    &none         &kp LG(LS(N4)) &kp PG_UP &kp PG_DN &kp LC(U)  &none         &none        &kp LA(A)    &kp F20  &kp F13 &kp F17
                                           &none     &kp LGUI  &kp LCTRL  &kp SPACE     &none        &none
                         >;
                         sensor-bindings = <&inc_dec_cp C_VOL_UP C_VOL_DN>;
